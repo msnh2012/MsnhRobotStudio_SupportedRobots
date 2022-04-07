@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<robot name="UniversalRobots_UR5">
+  <link name="BaseLink">
+    <visual>
+      <geometry>
+        <mesh filename="package://Visual/BaseLink.dae" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://Collision/BaseLink.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="4.0" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+      <inertia ixx="0.00443333156" ixy="0.0" ixz="0.0" iyy="0.00443333156" iyz="0.0" izz="0.0072" />
+    </inertial>
+  </link>
+  <joint name="Joint1" type="revolute">
+    <parent link="BaseLink" />
+    <child link="Link1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.089159" />
+    <axis xyz="0 0 1" />
+    <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.15" />
+    <dynamics damping="0.0" friction="0.0" />
+  </joint>
+  <link name="Link1">
+    <visual>
+      <geometry>
+        <mesh filename="package://Visual/Link1.dae" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://Collision/Link1.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.7" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+      <inertia ixx="0.010267495893" ixy="0.0" ixz="0.0" iyy="0.010267495893" iyz="0.0" izz="0.00666" />
+    </inertial>
+  </link>
+  <joint name="Joint2" type="revolute">
+    <parent link="Link1" />
+    <child link="Link2" />
+    <origin rpy="0.0 1.57079632679 0.0" xyz="0.0 0.13585 0.0" />
+    <axis xyz="0 1 0" />
+    <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.15" />
+    <dynamics damping="0.0" friction="0.0" />
+  </joint>
+  <link name="Link2">
+    <visual>
+      <geometry>
+        <mesh filename="package://Visual/Link2.dae" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://Collision/Link2.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="8.393" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.28" />
+      <inertia ixx="0.22689067591" ixy="0.0" ixz="0.0" iyy="0.22689067591" iyz="0.0" izz="0.0151074" />
+    </inertial>
+  </link>
+  <joint name="Joint3" type="revolute">
+    <parent link="Link2" />
+    <child link="Link3" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.1197 0.425" />
+    <axis xyz="0 1 0" />
+    <limit effort="150.0" lower="-2.792526803190927" upper="2.792526803190927" velocity="3.15" />
+    <dynamics damping="0.0" friction="0.0" />
+  </joint>
+  <link name="Link3">
+    <visual>
+      <geometry>
+        <mesh filename="package://Visual/Link3.dae" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://Collision/Link3.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.275" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.25" />
+      <inertia ixx="0.049443313556" ixy="0.0" ixz="0.0" iyy="0.049443313556" iyz="0.0" izz="0.004095" />
+    </inertial>
+  </link>
+  <joint name="Joint4" type="revolute">
+    <parent link="Link3" />
+    <child link="Link4" />
+    <origin rpy="0.0 1.57079632679 0.0" xyz="0.0 0.0 0.39225" />
+    <axis xyz="0 1 0" />
+    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.2" />
+    <dynamics damping="0.0" friction="0.0" />
+  </joint>
+  <link name="Link4">
+    <visual>
+      <geometry>
+        <mesh filename="package://Visual/Link4.dae" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://Collision/Link4.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.219" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+      <inertia ixx="0.111172755531" ixy="0.0" ixz="0.0" iyy="0.111172755531" iyz="0.0" izz="0.21942" />
+    </inertial>
+  </link>
+  <joint name="Joint5" type="revolute">
+    <parent link="Link4" />
+    <child link="Link5" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.093 0.0" />
+    <axis xyz="0 0 1" />
+    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.2" />
+    <dynamics damping="0.0" friction="0.0" />
+  </joint>
+  <link name="Link5">
+    <visual>
+      <geometry>
+        <mesh filename="package://Visual/Link5.dae" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://Collision/Link5.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.219" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+      <inertia ixx="0.111172755531" ixy="0.0" ixz="0.0" iyy="0.111172755531" iyz="0.0" izz="0.21942" />
+    </inertial>
+  </link>
+  <joint name="Joint6" type="revolute">
+    <parent link="Link5" />
+    <child link="Link6" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.09465" />
+    <axis xyz="0 1 0" />
+    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.2" />
+    <dynamics damping="0.0" friction="0.0" />
+  </joint>
+  <link name="Link6">
+    <visual>
+      <geometry>
+        <mesh filename="package://Visual/Link6.dae" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://Collision/Link6.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1879" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+      <inertia ixx="0.0171364731454" ixy="0.0" ixz="0.0" iyy="0.0171364731454" iyz="0.0" izz="0.033822" />
+    </inertial>
+  </link>
+  <joint name="JointEffector" type="fixed">
+    <parent link="Link6" />
+    <child link="EffectorLink" />
+    <origin rpy="0.0 0.0 1.57079632679" xyz="0.0 0.0823 0.0" />
+  </joint>
+  <link name="EffectorLink" />
+
+  <manipulator_info>
+    <manip name="Arm" />
+    <base_link name="BaseLink" />
+    <ee_link name="EffectorLink" />
+    <T_e_t pose="0 0 0 0 0 0 1" />
+    <dof_weights weight="2.096 1.625 1.12 0.51 0.406 0.244" />
+    <home_position position="0.0 -2.3561 1.57 -0.7853 0.0 0.0" />
+  </manipulator_info>
+
+  <chain_pair>
+    <base name="Joint1"/>
+    <end name="JointEffector"/>
+  </chain_pair>
+
+  <controller_info>
+    <controller_box name="CB Series" software_version="" />
+    <status jog="Yes" upload_file="Yes" generate_program="Yes" />
+  </controller_info>
+
+
+  <general_info>
+    <brand name="UniversalRobots" />
+    <dof value="6" />
+    <type name="Robot" />
+    <payload value="5" />
+    <weight value="18" />
+    <reach value="850" />
+    <repeat value="0.100" />
+    <image filename="package://UR5.png" />
+  </general_info>
+
+  <bounding_box>
+    <pose value="0.3913 0.0472 0.0546 0.0000 0.0000 0.0000 1.0000" />
+    <size length="0.9299" width="0.3144" height="0.2061" />
+  </bounding_box>
+
+  <self_collision>
+    <enable_pair link_first="BaseLink" link_second="Link2" />
+    <enable_pair link_first="Link2" link_second="Link5" />
+    <enable_pair link_first="Link3" link_second="Link6" />
+    <enable_pair link_first="BaseLink" link_second="Link5" />
+    <enable_pair link_first="Link2" link_second="Link6" />
+    <enable_pair link_first="Link1" link_second="Link5" />
+    <enable_pair link_first="BaseLink" link_second="Link6" />
+    <enable_pair link_first="Link3" link_second="Link5" />
+    <enable_pair link_first="Link1" link_second="Link6" />
+    <enable_pair link_first="BaseLink" link_second="Link3" />
+  </self_collision>
+</robot>

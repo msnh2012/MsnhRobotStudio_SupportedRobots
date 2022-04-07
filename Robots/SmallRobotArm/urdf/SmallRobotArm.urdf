@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<robot name="SmallRobotArm">
+
+    <link name="link1">
+        <visual>
+            <origin xyz="0.047 0.0121 0.25" rpy="0 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link1.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.9 0.9 0 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="0.047 0.0121 0.25" rpy="0 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint1" type="revolute">
+        <origin xyz="0 0 0.043" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-2.09439510302" upper="2.09439510302" effort="100" velocity="0.4" />
+        <parent link="link1"/>
+        <child link="link2"/>
+    </joint>
+
+    <link name="link2">
+        <visual>
+            <origin xyz="0.047 0.012 0.208" rpy="0 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link2.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.9 0.9 0 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="0.047 0.012 0.208" rpy="0 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint2" type="revolute">
+        <origin xyz="0.047 -0.0485 0.098" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.5707963" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link2"/>
+        <child link="link3"/>
+    </joint>
+
+    <link name="link3">
+        <visual>
+            <origin xyz="0 0 0" rpy="1.5707963 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link3.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.9 0.9 0 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="1.5707963 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint3" type="revolute">
+        <origin xyz="0 0.08 0.111" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.1415926" upper="1.5707963" effort="100" velocity="0.4" />
+        <parent link="link3"/>
+        <child link="link4"/>
+    </joint>
+
+
+    <link name="link4">
+        <visual>
+          <origin xyz="0.08 -0.0286 0.01" rpy="0 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link4.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.9 0.9 0 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="0.08 -0.0286 0.01" rpy="0 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint4" type="revolute">
+        <origin xyz="-0.026 -0.0316 0.0258" rpy="0 1.5707963 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.5707963" upper="1.5707963" effort="100" velocity="0.4" />
+        <parent link="link4"/>
+        <child link="link5"/>
+    </joint>
+
+
+    <link name="link5">
+        <visual>
+          <origin xyz="0.016 0.003 0.106" rpy="0 1.5707963 1.5707963" />
+            <geometry>
+                <mesh filename="package://link5.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.9 0.9 0 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="0.016 0.003 0.106" rpy="0 1.5707963 1.5707963" />
+            <geometry>
+                <mesh filename="package://link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint5" type="revolute">
+        <origin xyz="0 0 0.144" rpy="0 0 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-0.7853981636" upper="3.9269908181625" effort="100" velocity="0.4" />
+        <parent link="link5"/>
+        <child link="link6"/>
+    </joint>
+
+    <link name="link6">
+        <visual>
+          <origin xyz="0.018 0 0" rpy="3.1415926 0 -1.5707963" />
+            <geometry>
+                <mesh filename="package://link6.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.9 0.9 0 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="0.018 0 0" rpy="3.1415926 0 -1.5707963" />
+            <geometry>
+                <mesh filename="package://link6.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint6" type="revolute">
+        <origin xyz="0.0253 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link6"/>
+        <child link="link7"/>
+    </joint>
+
+
+    <link name="link7">
+        <visual>
+            <origin xyz="-0.0555 0.003 -0.016" rpy="0 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link7.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.9 0.9 0 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="-0.0555 0.003 -0.016" rpy="0 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://link7.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+  <chain_pair name="pair0">
+    <base name="joint1"/>
+    <end name="joint6"/>
+  </chain_pair>
+
+</robot>
