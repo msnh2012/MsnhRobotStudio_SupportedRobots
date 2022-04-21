@@ -3,7 +3,7 @@
   <link name="BaseLink">
     <visual>
       <geometry>
-        <mesh filename="package://Visual/BaseLink.dae" />
+        <mesh filename="package://UR5/Visual/BaseLink.dae" />
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0" />
@@ -11,7 +11,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://Collision/BaseLink.stl" />
+        <mesh filename="package://UR5/Collision/BaseLink.stl" />
       </geometry>
     </collision>
     <inertial>
@@ -31,7 +31,7 @@
   <link name="Link1">
     <visual>
       <geometry>
-        <mesh filename="package://Visual/Link1.dae" />
+        <mesh filename="package://UR5/Visual/Link1.dae" />
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0" />
@@ -39,7 +39,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://Collision/Link1.stl" />
+        <mesh filename="package://UR5/Collision/Link1.stl" />
       </geometry>
     </collision>
     <inertial>
@@ -59,7 +59,7 @@
   <link name="Link2">
     <visual>
       <geometry>
-        <mesh filename="package://Visual/Link2.dae" />
+        <mesh filename="package://UR5/Visual/Link2.dae" />
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0" />
@@ -67,7 +67,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://Collision/Link2.stl" />
+        <mesh filename="package://UR5/Collision/Link2.stl" />
       </geometry>
     </collision>
     <inertial>
@@ -87,7 +87,7 @@
   <link name="Link3">
     <visual>
       <geometry>
-        <mesh filename="package://Visual/Link3.dae" />
+        <mesh filename="package://UR5/Visual/Link3.dae" />
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0" />
@@ -95,7 +95,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://Collision/Link3.stl" />
+        <mesh filename="package://UR5/Collision/Link3.stl" />
       </geometry>
     </collision>
     <inertial>
@@ -115,7 +115,7 @@
   <link name="Link4">
     <visual>
       <geometry>
-        <mesh filename="package://Visual/Link4.dae" />
+        <mesh filename="package://UR5/Visual/Link4.dae" />
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0" />
@@ -123,7 +123,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://Collision/Link4.stl" />
+        <mesh filename="package://UR5/Collision/Link4.stl" />
       </geometry>
     </collision>
     <inertial>
@@ -143,7 +143,7 @@
   <link name="Link5">
     <visual>
       <geometry>
-        <mesh filename="package://Visual/Link5.dae" />
+        <mesh filename="package://UR5/Visual/Link5.dae" />
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0" />
@@ -151,7 +151,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://Collision/Link5.stl" />
+        <mesh filename="package://UR5/Collision/Link5.stl" />
       </geometry>
     </collision>
     <inertial>
@@ -171,7 +171,7 @@
   <link name="Link6">
     <visual>
       <geometry>
-        <mesh filename="package://Visual/Link6.dae" />
+        <mesh filename="package://UR5/Visual/Link6.dae" />
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0" />
@@ -179,7 +179,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://Collision/Link6.stl" />
+        <mesh filename="package://UR5/Collision/Link6.stl" />
       </geometry>
     </collision>
     <inertial>
@@ -194,15 +194,6 @@
     <origin rpy="0.0 0.0 1.57079632679" xyz="0.0 0.0823 0.0" />
   </joint>
   <link name="EffectorLink" />
-
-  <manipulator_info>
-    <manip name="Arm" />
-    <base_link name="BaseLink" />
-    <ee_link name="EffectorLink" />
-    <T_e_t pose="0 0 0 0 0 0 1" />
-    <dof_weights weight="2.096 1.625 1.12 0.51 0.406 0.244" />
-    <home_position position="0.0 -2.3561 1.57 -0.7853 0.0 0.0" />
-  </manipulator_info>
 
   <chain_pair>
     <base name="Joint1"/>
@@ -223,7 +214,7 @@
     <weight value="18" />
     <reach value="850" />
     <repeat value="0.100" />
-    <image filename="package://UR5.png" />
+    <image filename="package://UR5/UR5.png" />
   </general_info>
 
   <bounding_box>
