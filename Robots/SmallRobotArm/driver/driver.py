@@ -16,6 +16,14 @@ from MsnhProto.py.AD32 import AD32                          #AD信号0~(2^32-1)
 from MsnhProto.py.DIO import DIO                            #IO信号ON-OFF
 from MsnhProto.py.Base import Base                          #基础协议，用于解码
 
+# 轴    脉冲范围(极小l~零位o~极大m)    ROS范围(Rl~Rm)      Studio<-->real      脉冲与转角对应公式             细分a   步距角b  传动比c   极大
+# J1    0~10240~20480              -120~120               0      0        y = x/240*20480+10240          32     1.8    4.8       m = 360/b*a*c/360*(abs(Rm-Rl))
+# J2    0~5582~14115               -78.5~120              0      -90      y = (x+78.5)/198.5*14115       32     1.8    4.0       m = 360/b*a*c/360*(abs(Rm-Rl)) 
+# J3    0~6569~22569               73.9~-180              0      90       y = (-x+73.9)/253.9*22569      32     1.8    5.0       m = 360/b*a*c/360*(abs(Rm-Rl))
+# J4    0~8960~17920               -180~180               0      0        y = x/360*17920+8960           32     1.8    2.8       m = 360/b*a*c/360*(abs(Rm-Rl))
+# J5    0~8400~10080               -45~225                0      -90      y = (x+45)/270*10080           32     1.8    2.1       m = 360/b*a*c/360*(abs(Rm-Rl))
+# J6    0~3200~6400                -180~180               0      0        y = x/360*6400+3200            32     1.8    1.0       m = 360/b*a*c/360*(abs(Rm-Rl))
+
 def calSteps(angles):
 	try:
 		out = []
@@ -24,7 +32,7 @@ def calSteps(angles):
 		out.append(int((-angles[2]+73.9)/253.9*22569))
 		out.append(int(-angles[3]/360*17920+8960))
 		out.append(int((angles[4]+45)/270*10080))
-		out.append(int(-angles[5]/360*17920+8960))
+		out.append(int(-angles[5]/360*6400+3200))
 		#print(out)
 		return out
 	except BaseException:
